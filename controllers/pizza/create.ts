@@ -87,6 +87,7 @@ export async function create({
 
   try {
     // Start transaction
+    // @ts-ignore
     await supabase.rpc('start_transaction'); // TODO: fix types
     // Insert the pizza
     const { data: pizzaData, error: pizzaError } = await supabase
@@ -115,10 +116,12 @@ export async function create({
     }
 
     // Commit transaction
+    // @ts-ignore
     await supabase.rpc('commit_transaction'); // TODO: fix types
     return pizzaData;
   } catch (error) {
     // Rollback transaction in case of error
+    // @ts-ignore
     await supabase.rpc('rollback_transaction'); // TODO: fix types
     console.error('Error in creating pizza:', error);
     throw error;
