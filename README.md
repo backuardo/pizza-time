@@ -1,5 +1,10 @@
 # Pizza Time
 
+## Run locally
+- Create .env.local file with NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, NEXT_PUBLIC_SITE_ORIGIN
+- run `npm i`
+- run `npm run dev`
+
 ## DB Creation
 ```
 -- Create pizzas table
