@@ -15,6 +15,7 @@ export async function remove(id: number) {
     .from('pizzas')
     .select('id')
     .eq('id', id)
+    // @ts-ignore
     .eq('user_id', user.id)
     .single();
 
