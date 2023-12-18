@@ -38,6 +38,7 @@ export async function list(): Promise<ClientPizza[]> {
     id: pizza.id,
     name: pizza.name,
     ingredients: pizza.pizza_ingredients.map((pizzaIngredient) => ({
+      // @ts-ignore
       name: pizzaIngredient.ingredient.name,
       quantity: pizzaIngredient.quantity,
       unit: pizzaIngredient.unit,
